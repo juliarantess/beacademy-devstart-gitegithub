@@ -16,15 +16,15 @@ Verifique a versão instalada do Git
   git --version
 ```
 
-## Git — Configuração inicial
-Configure as credenciais do Git, assim será possível identificar os usuários responsáveis pelas alterações no projeto.
+## Git
+### Configuração inicial
+Configure as credenciais do Git, assim será possível identificar os usuários responsáveis pelas alterações no projeto
 ```bash
   git config --global user.name "Your name"
   git config --global user.email "Your e-mail"
 ```
 
-## Comandos iniciais
-### Git — Repositório local
+### Comandos iniciais
 `git init` — Inicializa um repositório local do Git.
 
 `git status` — Exibe o status dos arquivos do repositório local.
@@ -59,15 +59,15 @@ Execute o comando abaixo no terminal
 ```bash
   ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
-Após inserir uma senha, busque pelo caminho indicado no terminal, abra o arquivo .pub e copie a chave.
+Após inserir uma senha, busque pelo caminho indicado no terminal, abra o arquivo **.pub** e copie a chave.
 
 No GitHub, em [SSH keys](https://github.com/settings/keys), adicione uma nova chave.
 
-Feito isso, é possível realizar o clone de um repositório pelo protocolo SSH.
+### Publicando no repositório remoto
+Chave SSH configurada, é possível clonar o repositório remoto pelo protocolo SSH.
 
 `git clone <link_do_repositorio>` — Realiza o download de um repositório remoto do GitHub para seu repositório local.
 
-### Subindo para o repositório remoto
 `git remote -v` — Lista os repositórios remotos.
 
 `git push` — Envia as alterações realizadas no repositório local para o repositório remoto.
