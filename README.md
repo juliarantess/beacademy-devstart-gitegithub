@@ -50,6 +50,17 @@ Configure as credenciais do Git, assim será possível identificar os usuários 
 
 `git merge <nome_da_branch>` — Unifica os arquivos das branches.
 
+`git stash` — Salva as alterações sem commit.
+
+`git stash --include-untracked` — Salva as alterações sem commit incluindo arquivos não rastreados.
+
+`git stash list` — Lista os stashes disponíveis.
+
+`git stash pop` — Restaura a stash com as alterações reservadas.
+
+`git stash pop stash@{1}` — Restaura uma stash específica.
+
+
 ## GitHub — Repositório remoto
 ### Configurando a chave SSH
 Através do protocolo SSH (Secure Shell), é possível se conectar a servidores e serviços remotos. A chave SSH permite conectar-se ao GitHub inserindo dados de acesso uma única vez.
