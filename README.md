@@ -23,4 +23,51 @@ Configure as credenciais do Git, assim será possível identificar os usuários 
   git config --global user.email "Your e-mail"
 ```
 
-## Git — Comandos
+## Comandos iniciais
+### Git — Repositório local
+`git init` — Inicializa um repositório local do Git.
+
+`git status` — Exibe o status dos arquivos do repositório local.
+
+`git add .` — Adiciona todos os arquivos do repositório local ao versionamento, preparando-os para o commit.
+
+`git rm --cached <nome_do_arquivo>` — Remove o arquivo do versionamento.
+
+`git commit -m <adicionar_mensagem_commit>` — Registra as alterações no arquivo e envia para a plataforma de versionamento.
+
+`git log` — Exibe informações sobre os commits realizados.
+
+### Branches
+`git branch` — Lista as branches criadas no repositório local e a branch atual.
+
+`git branch <nome_da_branch>` — Cria uma branch nova.
+
+`git checkout <nome_da_branch>` — Alterna entre uma branch e outra.
+
+`git checkout -b <nome_da_branch>` — Cria uma branch nova, acessando-a em seguida.
+
+`git branch -d <nome_da_branch>` — Remove uma branch.
+
+`git merge <nome_da_branch>` — Unifica os arquivos das branches.
+
+## GitHub — Repositório remoto
+### Configurando a chave SSH
+Através do protocolo SSH (Secure Shell), é possível se conectar a servidores e serviços remotos. A chave SSH permite conectar-se ao GitHub inserindo dados de acesso uma única vez.
+
+Execute o comando abaixo no terminal
+
+```bash
+  ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+Após inserir uma senha, busque pelo caminho indicado no terminal, abra o arquivo .pub e copie a chave.
+
+No GitHub, em [SSH keys](https://github.com/settings/keys), adicione uma nova chave.
+
+Feito isso, é possível realizar o clone de um repositório pelo protocolo SSH.
+
+`git clone <link_do_repositorio>` — Realiza o download de um repositório remoto do GitHub para seu repositório local.
+
+### Subindo para o repositório remoto
+`git remote -v` — Lista os repositórios remotos.
+
+`git push` — Envia as alterações realizadas no repositório local para o repositório remoto.
